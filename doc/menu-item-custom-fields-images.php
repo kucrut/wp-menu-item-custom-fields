@@ -44,11 +44,11 @@ class Menu_Item_Custom_Fields_Images {
 		add_action( 'wp_update_nav_menu_item', array( __CLASS__, '_save' ), 10, 3 );
 		add_filter( 'manage_nav-menus_columns', array( __CLASS__, '_columns' ), 99 );
 
-    global $pagenow;
-    if ( $pagenow == 'nav-menus.php' ) {
-      wp_enqueue_media();
-      add_action( 'admin_footer', array( __CLASS__, '_admin_js' ) );
-    }
+		global $pagenow;
+		if ( $pagenow == 'nav-menus.php' ) {
+		  wp_enqueue_media();
+		  add_action( 'admin_footer', array( __CLASS__, '_admin_js' ) );
+		}
 
 		self::$fields = array(
 			'image' => __( 'Image', 'menu-item-custom-fields-image' ),
