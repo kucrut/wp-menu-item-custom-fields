@@ -88,7 +88,7 @@ class Menu_Item_Custom_Fields_Images {
 
         $('.menu_image_clear').click(function(e) {
           e.preventDefault();
-          var fieldforid = jQuery(this).data('for-id');
+          fieldforid = jQuery(this).data('for-id');
           $('#'+fieldforid).val('').trigger('input');
         });
 
