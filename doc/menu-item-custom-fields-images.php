@@ -63,7 +63,7 @@ class Menu_Item_Custom_Fields_Images {
 
         $('.menu_image_upload').click(function(e) {
             e.preventDefault();
-            var fieldforid = jQuery(this).data('for-id');
+            fieldforid = jQuery(this).data('for-id');
 
             if (custom_uploader) {
                 custom_uploader.open();
@@ -172,7 +172,7 @@ class Menu_Item_Custom_Fields_Images {
 						'<label for="%1$s">%2$s<br />
 						<input type="hidden" id="%1$s" class="menu_image widefat %1$s" name="%3$s" value="%4$s" />
 						<img src="" id="menu_image_preview_%1$s" data-for-name="%3$s" data-for-id="%1$s" class="menu_image_preview" style="display:block;width:100px;height:auto;" />
-						<input type="button" id="menu_image_upload_%1$s" data-for-name="%3$s" data-for-id="%1$s" class="menu_image_upload" value="Upload Image" />
+						<input type="button" id="menu_image_upload_%1$s" data-for-name="%3$s" data-for-id="%1$s" class="menu_image_upload" value="Choose Image" />
 						<input type="button" id="menu_image_clear_%1$s" data-for-name="%3$s" data-for-id="%1$s" class="menu_image_clear" value="Clear Image" />
 						</label>',
 						esc_attr( $id ),
