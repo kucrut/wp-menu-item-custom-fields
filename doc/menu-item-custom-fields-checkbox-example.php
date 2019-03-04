@@ -73,13 +73,10 @@ class Menu_Item_Custom_Fields_Checkbox_Example {
 			// Sanitize
 			if ( ! empty( $_POST[ $key ][ $menu_item_db_id ] ) ) {
 				// Do some checks here...
-				$value = 'yes';
+				update_post_meta( $menu_item_db_id, $key, 'yes' );
 			} else {
-				$value = '';
+				delete_post_meta( $menu_item_db_id, $key );
 			}
-
-			// Update
-			update_post_meta( $menu_item_db_id, $key, $value );
 		}
 	}
 
